@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOA Upload Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hoa-upload">
+    <h2>Submit Your Legend</h2>
+    <form id="hoaForm">
+      <label for="alias">Alias</label>
+      <input type="text" id="alias" name="alias" required maxlength="30" placeholder="e.g. DigitalNomad42" />
+
+      <label for="bio">Lore or Description</label>
+      <textarea id="bio" name="bio" maxlength="500" placeholder="Tell us their story…"></textarea>
+
+      <label for="image">Avatar Image</label>
+      <input type="file" id="image" name="image" accept="image/*" />
+
+      <label for="tag">Tag or Affiliation</label>
+      <select id="tag" name="tag">
+        <option value="larper">Larper</option>
+        <option value="memeLord">Meme Lord</option>
+        <option value="digitalNomad">Digital Nomad</option>
+        <option value="custom">Custom</option>
+      </select>
+
+      <button type="submit" class="submit-button">Send to HOA</button>
+    </form>
+
+    <div id="submissionPreview" class="submission-preview"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
